@@ -1,9 +1,4 @@
-FROM python:3.10.8-slim-buster
-
-# Install only what is needed (NO upgrade)
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends git \
-    && rm -rf /var/lib/apt/lists/*
+FROM python:3.10-slim-bullseye
 
 WORKDIR /FileToLink
 
